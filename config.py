@@ -1,0 +1,6 @@
+SECRET_KEY = 'f038a541489b89f81762d12edfdd03835ceea10cfb3cdbdabfbfa0f48b0d4802'
+
+MYSQL_USER = "root"
+MYSQL_PASSWORD = "1234"
+MYSQL_DATABASE = "musicstore"
+MYSQL_HOST = "localhost"
