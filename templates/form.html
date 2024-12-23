@@ -1,0 +1,36 @@
+{% macro form_item(name, name_message=None, description_message=None)%}
+<form method="POST" enctype="multipart/form-data">
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Название</label>
+    <input name="name" type="name" class="form-control" id="name" aria-describedby="nameHelp">
+    {% if name_message %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ name_message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">О товаре</label>
+    <textarea name="description" class="form-control" id="description" aria-describedby="descriptionHelp"></textarea>
+    {% if description_message %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ description_message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+  </div>
+
+
+  <div class="mb-3">
+    <label for="userfile" class="form-label">Обложка</label>
+    <input name="MAX_FILE_SIZE" value="30000">
+    <input name="userfile" type="file">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>
+{% endmacro%}
